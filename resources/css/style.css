@@ -10,8 +10,6 @@ html {
   font-size: 16px;
 }
 
-
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -219,10 +217,19 @@ header .content {
   }
 }
 
-#hero .social {}
+#hero .social {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
 
 .linkedin:hover {
   color: #0077B5;
+}
+
+.twitter:hover {
+  color: #00ACED;
 }
 
 #arrowSymbol {
@@ -250,12 +257,10 @@ header .content {
   background-color: #F0F0F0;
 }
 
-
 #work .project .container {
   display: flex;
   height: 600px;
   max-height: 800px;
-  border: 1px solid green;
 }
 
 #work .project .container .content {
@@ -265,14 +270,12 @@ header .content {
   justify-content: center;
   padding: 5rem;
   line-height: 1.5;
-  border: 1px solid yellow;
 }
 
 #work .project .container .projectPrev {
   width: 60%;
   padding: 4rem;
   overflow: hidden;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,7 +285,6 @@ header .content {
   border-radius: 2rem;
   width: 100%;
   height: 25rem;
-  border: 1px solid orange;
 }
 
 @media only screen and (max-width: 945px) {
@@ -349,6 +351,26 @@ header .content {
   }
 }
 
+/* Contact Section Styles */
+
+#contact {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #484B5E;
+}
+
+#contact button {
+  width: 10rem;
+  padding: 1rem 2rem;
+  background-color: #484B5E;
+  color: white;
+  border: 4px solid white;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+}
+
 /*////////// Footer Styles //////////*/
 
 footer {
@@ -356,6 +378,14 @@ footer {
   color: white;
   font-family: "Raleway";
   font-size: .7rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #888888;
 }
 
 footer .content {
@@ -372,6 +402,7 @@ footer ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 }
 
 footer .social {
@@ -379,6 +410,7 @@ footer .social {
   justify-content: space-around;
   align-items: center;
   width: 8rem;
+  font-size: .9rem;
 }
 
 footer .date {
