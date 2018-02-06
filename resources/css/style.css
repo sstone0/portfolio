@@ -313,7 +313,8 @@ header .content {
     width: 60%;
   }
   #work .project .container .projectPrev {
-    width: 30rem;
+    width: 36rem;
+    max-width: 100%;
   }
 }
 
@@ -332,7 +333,7 @@ header .content {
   }
   #work .project .container {
     display: block;
-    padding: 0;
+    padding: 1rem;
   }
   #work .project .container .content {
     text-align: center;
@@ -340,14 +341,12 @@ header .content {
     margin: 0 auto;
   }
   #work .project .container .projectPrev {
-    overflow: hidden;
     height: 22rem;
     margin: 0 auto;
     padding: 0rem;
   }
   #work .project .container .projectPrev .image-container {
     border-radius: 1rem;
-    height: 100%;
   }
 }
 
@@ -440,6 +439,7 @@ footer .date {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
   }
   footer .date {
     color: #C0C0C0;
