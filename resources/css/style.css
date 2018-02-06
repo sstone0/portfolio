@@ -250,11 +250,12 @@ header .content {
   background-color: #F0F0F0;
 }
 
-@media only screen and (max-width: 945px) {}
 
 #work .project .container {
   display: flex;
+  height: 600px;
   max-height: 800px;
+  border: 1px solid green;
 }
 
 #work .project .container .content {
@@ -264,16 +265,24 @@ header .content {
   justify-content: center;
   padding: 5rem;
   line-height: 1.5;
+  border: 1px solid yellow;
 }
 
 #work .project .container .projectPrev {
   width: 60%;
-  padding: 5rem;
+  padding: 4rem;
   overflow: hidden;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #work .project .container .projectPrev .image-container {
   border-radius: 2rem;
+  width: 100%;
+  height: 25rem;
+  border: 1px solid orange;
 }
 
 @media only screen and (max-width: 945px) {
@@ -285,6 +294,9 @@ header .content {
     width: 50%;
     border-radius: 1rem;
     padding: 3rem;
+  }
+  #work .project .container .projectPrev .image-container {
+    height: 15rem;
   }
 }
 
