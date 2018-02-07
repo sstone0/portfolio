@@ -359,9 +359,11 @@ header .content {
 #contact {
   height: 20rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background-color: #484B5E;
+  color: white;
 }
 
 #contact button {
