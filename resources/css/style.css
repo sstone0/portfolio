@@ -232,6 +232,10 @@ header .content {
   color: #00ACED;
 }
 
+.instagram:hover {
+  color: #fbad50;
+}
+
 #arrowSymbol {
   padding-bottom: 2rem;
 }
