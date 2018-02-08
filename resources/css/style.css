@@ -378,7 +378,7 @@ header .content {
   padding: 1rem 2rem;
   background-color: #484B5E;
   color: white;
-  border: 4px solid white;
+  border: 2px solid white;
   border-radius: 0.5rem;
   font-size: 1.1rem;
   transition: all 0.5s ease;
@@ -386,7 +386,8 @@ header .content {
 
 #contact button:hover {
   background-color: #2A2C38;
-  border-color: #FF5733;
+
+  border: 4px solid #FF5733;
   transform: scale(1.1);
 }
 
