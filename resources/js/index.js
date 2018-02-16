@@ -2,8 +2,6 @@ $(function() {
 
 	const $window = $(window);
 
-
-
 	let scroll = () => {
 		// do the onscroll stuff you want here
 		let scrollTop = $window.scrollTop();
@@ -38,9 +36,6 @@ $(function() {
 		scroll();
 	}, 200);*/
 
-
-
-
 	// Add smooth scrolling to all links
 	$("a").on('click', function(event) {
 
@@ -64,10 +59,7 @@ $(function() {
 		} // End if
 	});
 
-
-
-})
-
+});
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
@@ -81,6 +73,4 @@ function closeNav() {
 	document.getElementById("main").style.width = "0";
 }
 
-function workLink() {
-	
-}
+function workLink() {}

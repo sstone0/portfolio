@@ -1,9 +1,9 @@
-/*//////////// General Styles ////////////*/
+/*/////////// General Styles ////////////*/
 
 @font-face {
-  font-family: "Adam";
-  src: url("fonts/ADAM.CG PRO.otf");
+  font-family: 'Adam';
   font-family: 'Raleway', sans-serif;
+  src: url('fonts/ADAM.CG PRO.otf');
 }
 
 html {
@@ -24,18 +24,18 @@ html {
 }
 
 h1 {
+  font-family: 'Adam';
   font-size: 2.7rem;
-  font-family: "Adam";
 }
 
 h2 {
+  font-family: 'Adam';
   font-size: 2.2rem;
-  font-family: "Adam";
 }
 
 h3 {
+  font-family: 'Raleway';
   font-size: 1.6rem;
-  font-family: "Raleway";
   font-weight: 700;
 }
 
@@ -59,7 +59,7 @@ span {
 }
 
 p {
-  font-family: "Raleway";
+  font-family: 'Raleway';
 }
 
 a {
@@ -69,16 +69,16 @@ a {
 /*////////// Header Styles //////////*/
 
 header {
-  width: 100%;
   position: fixed;
+  width: 100%;
   padding: 2rem 0;
+  transition: all .2s ease-out;
   color: white;
-  transition: all 0.2s ease-out;
 }
 
 header.scroll {
-  padding: 0.5rem 0;
-  background-color: #2A2C38;
+  padding: .5rem 0;
+  background-color: #2a2c38;
 }
 
 header .content {
@@ -90,7 +90,7 @@ header .content {
 #logo {
   width: 25rem;
   margin: 0 auto;
-  transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
 }
 
 #logo.scroll {
@@ -112,91 +112,92 @@ header .content {
 /*////////// SLide Out Nav Menu //////////*/
 
 #bars:hover {
-  color: #FF5733;
+  color: #ff5733;
 }
 
 /* The side navigation menu */
 
 .sideNav {
-  height: 100%;
-  /* 100% Full-height */
-  width: 0;
+  /* Stay at the top */
+  font-family: 'Adam';
   /* 0 width - change this with JavaScript */
   position: fixed;
   /* Stay in place */
   z-index: 20;
   /* Stay on top */
   top: 0;
-  /* Stay at the top */
-  font-family: "Adam";
   right: 0;
-  background-color: #2A2C38;
   overflow-x: hidden;
+  /* 100% Full-height */
+  width: 0;
+  height: 100%;
   /* Disable horizontal scroll */
   padding-top: 4rem;
   /* Place content 60px from the top */
-  transition: 0.5s;
+  transition: .5s;
+  background-color: #2a2c38;
   /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 
 .sideNav a {
-  padding: 1rem 1rem 1rem 2rem;
-  text-decoration: none;
   font-size: 1.4rem;
-  color: white;
   display: block;
-  transition: 0.3s;
+  padding: 1rem 1rem 1rem 2rem;
+  transition: .3s;
+  text-decoration: none;
+  color: white;
 }
 
 /* When you mouse over the navigation links, change their color */
 
 .sideNav a:hover {
-  color: #FF5733;
+  color: #ff5733;
 }
 
 /* Position and style the close button (top right corner) */
 
 .sideNav .closebtn {
+  font-size: 2.5rem;
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 2.5rem;
   margin-left: 50px;
 }
 
-/*////////// Hero Styles //////////*/
+/*/
+///////// Hero Styles //////////*/
 
 #hero {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   height: 100vh;
-  background-image: url("/images/heroImage.png");
+  background-image: url('/images/heroImage.png');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 #hero .wrapper {
-  height: 100%;
   display: flex;
+  align-content: center;
   flex-direction: column;
   justify-content: flex-end;
-  align-content: center;
+  height: 100%;
 }
 
 #hero .content {
-  width: 28rem;
-  height: 65%;
-  color: white;
-  text-align: center;
   line-height: 1.3;
   display: flex;
+  align-content: center;
   flex-direction: column;
   justify-content: space-between;
-  align-content: center;
+  width: 28rem;
+  height: 65%;
+  text-align: center;
+  color: white;
 }
 
 #hero .content .headers {
@@ -213,8 +214,8 @@ header .content {
     height: 30rem;
   }
   #hero .content {
-    height: 20rem;
     width: 20rem;
+    height: 20rem;
   }
   #hero .content .headers {
     padding-bottom: 2rem;
@@ -225,29 +226,30 @@ header .content {
 }
 
 #hero .social {
-  width: 50%;
   display: flex;
   justify-content: space-around;
+  width: 50%;
   margin: 0 auto;
 }
 
 .linkedin:hover {
-  color: #0077B5;
+  color: #0077b5;
 }
 
 .twitter:hover {
-  color: #00ACED;
+  color: #00aced;
 }
 
 .instagram:hover {
-  color: #FF5733;
+  color: #ff5733;
 }
 
 #arrowSymbol {
   padding-bottom: 2rem;
 }
 
-/*/////////// Work Section Styles ///////////*/
+/*/
+////////// Work Section Styles ///////////*/
 
 #work {
   padding-top: 4rem;
@@ -265,7 +267,7 @@ header .content {
 }
 
 #project2, #project4 {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 #work .project .container {
@@ -275,27 +277,27 @@ header .content {
 }
 
 #work .project .container .content {
-  width: 40%;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 40%;
   padding: 5rem;
-  line-height: 1.5;
 }
 
 #work .project .container .projectPrev {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
   width: 60%;
   padding: 4rem;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #work .project .container .projectPrev .image-container {
-  border-radius: 2rem;
   width: 100%;
   height: 25rem;
+  border-radius: 2rem;
 }
 
 @media only screen and (max-width: 945px) {
@@ -305,8 +307,8 @@ header .content {
   }
   #work .project .container .projectPrev {
     width: 50%;
-    border-radius: 1rem;
     padding: 3rem;
+    border-radius: 1rem;
   }
   #work .project .container .projectPrev .image-container {
     height: 15rem;
@@ -331,10 +333,10 @@ header .content {
 
 @media only screen and (max-width: 670px) {
   #work {
-    padding-top: 0rem;
+    padding-top: 0;
   }
   #work h2 {
-    padding: 3rem 0 0 0;
+    padding: 3rem 0 0;
   }
   #work .projects {
     display: block;
@@ -347,14 +349,14 @@ header .content {
     padding: 1rem;
   }
   #work .project .container .content {
-    text-align: center;
     line-height: 1.6;
     margin: 0 auto;
+    text-align: center;
   }
   #work .project .container .projectPrev {
     height: 22rem;
     margin: 0 auto;
-    padding: 0rem;
+    padding: 0;
   }
   #work .project .container .projectPrev .image-container {
     border-radius: 1rem;
@@ -364,40 +366,40 @@ header .content {
 /* Contact Section Styles */
 
 #contact {
-  height: 20rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  background-color: #484B5E;
+  height: 20rem;
   color: white;
+  background-color: #484b5e;
 }
 
 #contact button {
+  font-size: 1.1rem;
   width: 10rem;
   padding: 1rem 2rem;
-  background-color: #484B5E;
+  transition: all .5s ease;
   color: white;
   border: 2px solid white;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  transition: all 0.5s ease;
+  border-radius: .5rem;
+  background-color: #484b5e;
 }
 
 #contact button:hover {
-  background-color: #2A2C38;
-
-  border: 4px solid #FF5733;
   transform: scale(1.1);
+  border: 4px solid #ff5733;
+  background-color: #2a2c38;
 }
 
-/*////////// Footer Styles //////////*/
+/*/
+///////// Footer Styles //////////*/
 
 footer {
-  background-color: #2A2C38;
-  color: white;
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-size: .8rem;
+  color: white;
+  background-color: #2a2c38;
 }
 
 footer a {
@@ -405,13 +407,13 @@ footer a {
 }
 
 footer a:hover {
-  color: #FF5733;
+  color: #ff5733;
 }
 
 footer .content {
   display: flex;
-  justify-content: space-between;
   align-content: center;
+  justify-content: space-between;
   width: 85%;
   height: 8rem;
   margin: 0 auto;
@@ -419,33 +421,33 @@ footer .content {
 
 footer ul {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
 }
 
 footer .social {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 8rem;
   font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 8rem;
 }
 
 footer .date {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   width: 8rem;
 }
 
 #footerNav {
-  text-align: center;
-  width: 60%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  width: 60%;
+  text-align: center;
 }
 
 #footerNav ul {
@@ -455,11 +457,11 @@ footer .date {
 
 @media only screen and (max-width: 560px) {
   footer .content {
+    align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
   }
   footer .date {
-    color: #C0C0C0;
+    color: #c0c0c0;
   }
 }
