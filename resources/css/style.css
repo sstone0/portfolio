@@ -1,4 +1,4 @@
-/*/////////// General Styles ////////////*/
+/* Universal Styles */
 
 @font-face {
   font-family: 'Adam';
@@ -43,6 +43,14 @@ span {
   font-weight: bold;
 }
 
+p {
+  font-family: 'Raleway';
+}
+
+a {
+  color: white;
+}
+
 @media only screen and (max-width: 550px) {
   h1 {
     font-size: 2rem;
@@ -58,15 +66,7 @@ span {
   }
 }
 
-p {
-  font-family: 'Raleway';
-}
-
-a {
-  color: white;
-}
-
-/*////////// Header Styles //////////*/
+/* Header Styles */
 
 header {
   position: fixed;
@@ -74,6 +74,7 @@ header {
   padding: 2rem 0;
   transition: all .2s ease-out;
   color: white;
+  z-index: 20;
 }
 
 header.scroll {
@@ -85,12 +86,17 @@ header .content {
   display: flex;
   align-items: center;
   padding: 0 2rem;
+  opacity: 0;
+  animation: fade 4s 3s ease;
+  animation-fill-mode: forwards;
+
 }
 
 #logo {
   width: 25rem;
   margin: 0 auto;
   transition: all .2s ease-out;
+
 }
 
 #logo.scroll {
@@ -109,10 +115,55 @@ header .content {
   }
 }
 
-/*////////// SLide Out Nav Menu //////////*/
+/* Slide Out Nav Menu */
 
-#bars:hover {
+.bars:hover {
   color: #ff5733;
+}
+
+.bars path {
+  stroke: #ff5733;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  6.25% {
+    transform: translate(0, 10px);
+  }
+  12.5% {
+    transform: translate(0, 0)
+  }
+  18.75% {
+    transform: translate(0, 10px)
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* The side navigation menu */
@@ -120,23 +171,16 @@ header .content {
 .sideNav {
   /* Stay at the top */
   font-family: 'Adam';
-  /* 0 width - change this with JavaScript */
   position: fixed;
-  /* Stay in place */
   z-index: 20;
-  /* Stay on top */
   top: 0;
   right: 0;
   overflow-x: hidden;
-  /* 100% Full-height */
   width: 0;
   height: 100%;
-  /* Disable horizontal scroll */
   padding-top: 4rem;
-  /* Place content 60px from the top */
   transition: .5s;
   background-color: #2a2c38;
-  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -149,8 +193,6 @@ header .content {
   text-decoration: none;
   color: white;
 }
-
-/* When you mouse over the navigation links, change their color */
 
 .sideNav a:hover {
   color: #ff5733;
@@ -166,8 +208,7 @@ header .content {
   margin-left: 50px;
 }
 
-/*/
-///////// Hero Styles //////////*/
+/* Hero Styles */
 
 #hero {
   display: flex;
@@ -204,9 +245,16 @@ header .content {
   padding-bottom: 2rem;
 }
 
+#hero h1 {
+  animation: fadeIn 2s ease;
+}
+
 #hero .content p {
   font-size: 1.3rem;
   padding-top: 2rem;
+  opacity: 0;
+  animation: fadeIn 2s .8s ease;
+  animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 550px) {
@@ -230,6 +278,9 @@ header .content {
   justify-content: space-around;
   width: 50%;
   margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 2s 1.4s ease;
+  animation-fill-mode: forwards;
 }
 
 .linkedin:hover {
@@ -246,10 +297,16 @@ header .content {
 
 #arrowSymbol {
   padding-bottom: 2rem;
+  opacity: 0;
+  animation: fade 2s 5s ease;
+  animation-fill-mode: forwards;
 }
 
-/*/
-////////// Work Section Styles ///////////*/
+#arrowSymbol svg {
+  animation: bounce 3s infinite;
+}
+
+/* Work Section Styles */
 
 #work {
   padding-top: 4rem;
@@ -392,8 +449,7 @@ header .content {
   background-color: #2a2c38;
 }
 
-/*/
-///////// Footer Styles //////////*/
+/* Footer Styles */
 
 footer {
   font-family: 'Raleway';

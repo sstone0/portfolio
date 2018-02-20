@@ -1,9 +1,9 @@
 $(function() {
 
 	const $window = $(window);
-
+	// scroll function for header change //
 	let scroll = () => {
-		// do the onscroll stuff you want here
+
 		let scrollTop = $window.scrollTop();
 		let header = $('#header');
 		let logo = $('#logo');
@@ -30,13 +30,8 @@ $(function() {
 			waiting = false;
 		}, 100);
 	});
-	// schedule an extra execution of scroll() after 200ms
-	// in case the scrolling stops in next 100ms
-	/*endScrollHandle = setTimeout(function() {
-		scroll();
-	}, 200);*/
 
-	// Add smooth scrolling to all links
+	// smooth scrolling for all links
 	$("a").on('click', function(event) {
 
 		// Make sure this.hash has a value before overriding default behavior
@@ -48,7 +43,6 @@ $(function() {
 			var hash = this.hash;
 
 			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 			$('html, body').animate({
 				scrollTop: $(hash).offset().top
 			}, 800, function() {
@@ -58,10 +52,9 @@ $(function() {
 			});
 		} // End if
 	});
-
 });
 
-/* Set the width of the side navigation to 250px */
+/* Set the width of the side navigation to 12rem */
 function openNav() {
 	document.getElementById("sideNav").style.width = "12rem";
 	document.getElementById("main").style.width = "auto";
@@ -72,5 +65,3 @@ function closeNav() {
 	document.getElementById("sideNav").style.width = "0";
 	document.getElementById("main").style.width = "0";
 }
-
-function workLink() {}
