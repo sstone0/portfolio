@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="131px" viewBox="0 0 178 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>logo1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="SignPainter-HouseScriptSemibold, SignPainter" font-style="condensed" font-weight="500">
+        <g id="logo1" transform="translate(-7.000000, -14.000000)" fill="#000000">
+            <text id="Stone" transform="translate(93.965794, 70.001003) rotate(-12.000000) translate(-93.965794, -70.001003) " font-size="100">
+                <tspan x="7.46579355" y="95.0010033">Stone</tspan>
+            </text>
+            <text id="Shawn" transform="translate(125.724201, 29.927831) rotate(-12.000000) translate(-125.724201, -29.927831) " font-size="45">
+                <tspan x="78.2242007" y="41.4278311">Shawn</tspan>
+            </text>
+            <text id="Design" transform="translate(52.906713, 122.035933) rotate(-12.000000) translate(-52.906713, -122.035933) " font-size="41">
+                <tspan x="9.90671311" y="132.535933">Design</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

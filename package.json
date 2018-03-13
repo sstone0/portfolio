@@ -6,8 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sstone0/portfolio.git"
+  },
   "author": "Shawn Stone",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sstone0/portfolio/issues"
+  },
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
