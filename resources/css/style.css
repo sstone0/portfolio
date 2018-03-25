@@ -11,6 +11,7 @@ html {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
 }
 
 .image-container {
@@ -50,8 +51,8 @@ a {
 }
 
 .hidden {
-  -webkit-transform: translate(0, 4rem);
-  transform: translate(0, 4rem);
+  -webkit-transform: translate(4rem, 0);
+  transform: translate(4rem, 0);
   opacity: 0;
 }
 
@@ -347,24 +348,6 @@ header .content {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@media only screen and (max-width: 550px) {
-  #hero {
-    height: 30rem;
-  }
-
-  #hero .content {
-    width: 20rem;
-    height: 20rem;
-  }
-
-  #hero .content .headers {
-    padding-bottom: 2rem;
-  }
-
-  #hero .content p {
-    font-size: 1rem;
-  }
-}
 
 #hero .social {
   display: -webkit-box;
@@ -406,13 +389,36 @@ header .content {
   -webkit-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
+@media only screen and (max-width: 550px) {
+  #hero {
+    height: 30rem;
+  }
+
+  #hero .content {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  #hero .content .headers h1{
+    font-size: 1.5rem;
+
+  }
+
+  #hero .content p {
+    font-size: 1rem;
+  }
+
+  #arrowSymbol {
+    padding-bottom: 1rem;
+  }
+}
 /* Work Section Styles */
 #work {
   padding-top: 4rem;
 }
 
 #work h2 {
-  padding: 2rem 0;
+  padding-top: 2rem;
   text-align: center;
 }
 
@@ -429,20 +435,20 @@ header .content {
   justify-content: center;
 }
 
-#project2,
-#project4 {
+.project:nth-of-type(even) {
   background-color: #f0f0f0;
 }
 
-#work .project .container {
+#work .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 600px;
-  max-height: 800px;
+  justify-content: center;
+  padding: 0 5%;
+  min-height: 600px;
 }
 
-#work .project .container .content {
+#work .project .content {
   line-height: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,105 +460,55 @@ header .content {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 40%;
-  padding: 5rem;
+  width: 50%;
+  margin-right: 4rem;
 }
 
-#work .project .container .content p {
+#work .project .content p {
   padding: 0.8rem 0;
 }
 
-#work .project .container .projectPrev {
+#work .project .projectPrev {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 60%;
-  padding: 4rem;
+  max-width: 100%;
 }
 
-#work .project .container .projectPrev .image-container {
-  width: 100%;
+#work .project .projectPrev .image-container {
   height: 25rem;
-  border-radius: 2rem;
 }
-@media only screen and (max-width: 945px) {
-  #work .project .container .content {
-    width: 50%;
-    padding: 3rem;
-  }
-
-  #work .project .container .projectPrev {
-    width: 50%;
-    padding: 3rem;
-    border-radius: 1rem;
-  }
-
-  #work .project .container .projectPrev .image-container {
-    height: 15rem;
-  }
-}
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 870px) {
   #work {
-    padding-top: 2.5rem;
-  }
-
-  #work p {
-    font-size: 0.8rem;
-  }
-
-  #work .project .container .content {
-    width: 60%;
-  }
-
-  #work .project .container .projectPrev {
-    width: 36rem;
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 670px) {
-  #work {
-    padding-top: 0;
-  }
-
-  #work h2 {
-    padding: 3rem 0 0;
+    padding-top: 2rem;
   }
 
   #work .projects {
     display: block;
   }
 
-  #work .projects .project {
-    padding-bottom: 2rem;
-  }
-
-  #work .project .container {
+  #work .project .container{
     display: block;
-    padding: 1rem;
+    padding: 2rem 5%;
   }
 
-  #work .project .container .content {
-    line-height: 1.6;
-    margin: 0 auto;
+  #work .project .content {
+    width: 100%;
+    margin: 1.2rem auto;
     text-align: center;
   }
 
-  #work .project .container .projectPrev {
-    height: 22rem;
-    margin: 0 auto;
+  #work .project .projectPrev {
     padding: 0;
   }
 
-  #work .project .container .projectPrev .image-container {
-    border-radius: 1rem;
-  }
+  #work .project .projectPrev .image-container {}
 }
 /* Contact Section Styles */
 #contact {
