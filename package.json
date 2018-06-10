@@ -16,11 +16,11 @@
     "url": "https://github.com/sstone0/portfolio/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0"
+    "gulp-autoprefixer": "^5.0.0"
   },
   "dependencies": {
-    "rellax": "^1.6.0"
+    "rellax": "^1.6.2"
   }
 }

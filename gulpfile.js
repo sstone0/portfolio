@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync');
 
 gulp.task('autoprefix', () => {
 	gulp.src('resources/css/style.css')
