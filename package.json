@@ -16,13 +16,10 @@
     "url": "https://github.com/sstone0/portfolio/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.24.6",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0"
   },
-  "dependencies": {
-    "rellax": "^1.6.2"
-  }
+  "dependencies": {},
+  "homepage": "https://github.com/sstone0/portfolio#readme"
 }
