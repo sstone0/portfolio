@@ -58,7 +58,7 @@ $(function() {
 
 
 // Set the width of the side navigation to 12rem //
-const  openNav = () => {
+const openNav = () => {
 	document.getElementById("sideNav").style.width = "12rem";
 	document.getElementById("main").style.width = "auto";
 };

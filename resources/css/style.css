@@ -63,6 +63,7 @@ a {
   transform: translate(0, 0);
   opacity: 1;
 }
+
 @media only screen and (max-width: 550px) {
   h1 {
     font-size: 2rem;
@@ -80,6 +81,7 @@ a {
     font-size: 0.9rem;
   }
 }
+
 /* Header Styles */
 header {
   position: fixed;
@@ -120,6 +122,7 @@ header .content {
   width: 5rem;
   margin: 0.5rem auto;
 }
+
 @media only screen and (max-width: 550px) {
   #logo {
     width: 8rem;
@@ -129,10 +132,12 @@ header .content {
     width: 5rem;
   }
 }
+
 /* Slide Out Nav Menu */
 .bars:hover {
   color: #29BDB7;
 }
+
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: translate(0, 0);
@@ -164,6 +169,7 @@ header .content {
     transform: translate(0, 0);
   }
 }
+
 @keyframes bounce {
   0% {
     -webkit-transform: translate(0, 0);
@@ -195,6 +201,7 @@ header .content {
     transform: translate(0, 0);
   }
 }
+
 @-webkit-keyframes fadeIn {
   0% {
     -webkit-transform: translate(0, 4rem);
@@ -208,6 +215,7 @@ header .content {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   0% {
     -webkit-transform: translate(0, 4rem);
@@ -221,6 +229,7 @@ header .content {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -230,6 +239,7 @@ header .content {
     opacity: 1;
   }
 }
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -239,6 +249,7 @@ header .content {
     opacity: 1;
   }
 }
+
 /* The side navigation menu */
 .sideNav {
   /* Stay at the top */
@@ -255,6 +266,7 @@ header .content {
   transition: 0.5s;
   background-color: #2a2c38;
 }
+
 /* The navigation menu links */
 .sideNav a {
   font-size: 1.4rem;
@@ -269,6 +281,7 @@ header .content {
 .sideNav a:hover {
   color: #29BDB7;
 }
+
 /* Position and style the close button (top right corner) */
 .sideNav .closebtn {
   font-size: 2.5rem;
@@ -277,6 +290,7 @@ header .content {
   right: 0;
   margin-left: 50px;
 }
+
 /* Hero Styles */
 #hero {
   display: -webkit-box;
@@ -389,25 +403,21 @@ header .content {
   -webkit-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
+
 @media only screen and (max-width: 550px) {
   #hero {
     height: 30rem;
   }
-
   #hero .content {
     width: 20rem;
     height: 20rem;
   }
-
   #hero .content .headers h1{
     font-size: 1.5rem;
-
   }
-
   #hero .content p {
     font-size: 1rem;
   }
-
   #arrowSymbol {
     padding-bottom: 1rem;
   }
@@ -484,6 +494,7 @@ header .content {
 #work .project .projectPrev .image-container {
   height: 25rem;
 }
+
 @media only screen and (max-width: 870px) {
   #work {
     padding-top: 2rem;
@@ -510,6 +521,7 @@ header .content {
 
   #work .project .projectPrev .image-container {}
 }
+
 /* Contact Section Styles */
 #contact {
   display: -webkit-box;
@@ -547,6 +559,7 @@ header .content {
   background-color: #29BDB7;
   color: black;
 }
+
 /* Footer Styles */
 footer {
   font-family: 'Raleway';
@@ -636,6 +649,7 @@ footer .date {
   width: 12rem;
   margin: 0 auto;
 }
+
 @media only screen and (max-width: 560px) {
   footer .content {
     -webkit-box-align: center;
@@ -648,7 +662,6 @@ footer .date {
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
-
   footer .date {
     color: #c0c0c0;
   }
