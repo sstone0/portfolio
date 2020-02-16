@@ -382,6 +382,10 @@ header .content {
   color: #0077b5;
 }
 
+.github:hover {
+  color: #6f42c1;
+}
+
 .twitter:hover {
   color: #00aced;
 }
