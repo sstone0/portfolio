@@ -46,7 +46,7 @@ $(function() {
 			////////check to see if this current container is within viewport////////
 			if ((element_bottom_position >= window_top_position) &&
 				(element_top_position <= (window_bottom_position - 300))) {
-				$element.addClass('fadeInLeft');
+				$element.addClass('fadeIn');
 			}
 		});
 	};
