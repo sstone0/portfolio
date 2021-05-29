@@ -16,10 +16,9 @@
     "url": "https://github.com/sstone0/portfolio/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1"
+    "gulp-autoprefixer": "^8.0.0"
   },
-  "dependencies": {},
   "homepage": "https://github.com/sstone0/portfolio"
 }
