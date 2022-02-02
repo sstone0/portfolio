@@ -73,7 +73,11 @@ const Home = () => {
 									</Link>
 								</li>
 								<li>
-									<a href="/shawn_stone_resume1.pdf" target="_blank">
+									<a
+										href="/shawn_stone_resume1.pdf"
+										target="_blank"
+										rel="noreferrer"
+									>
 										<Button title="Resume" label="Resume" />
 									</a>
 								</li>
@@ -205,7 +209,11 @@ const Home = () => {
 						<div className="sm:flex sm:justify-between md:flex-row flex-col justify-center items-center text-white font-bold">
 							<ul className="sm:justify-center flex text-lg">
 								<li className="pr-4">
-									<a href="https://github.com/sstone0" target="_blank">
+									<a
+										href="https://github.com/sstone0"
+										target="_blank"
+										rel="noreferrer"
+									>
 										<FaGithub />
 									</a>
 								</li>
@@ -213,6 +221,7 @@ const Home = () => {
 									<a
 										href="https://www.linkedin.com/in/shawn-stone/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<FaLinkedinIn />
 									</a>
