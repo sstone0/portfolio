@@ -46,7 +46,7 @@ const Home = () => {
 			<main>
 				<div
 					id="header"
-					className={` mx-auto font-bold text-white z-50 fixed inset-0 h-fit transition-all ${
+					className={`mx-auto font-bold text-white z-50 fixed inset-0 h-fit transition-all ${
 						isScrolled ? 'text-black drop-shadow-lg bg-white' : ''
 					}`}
 				>
@@ -100,7 +100,7 @@ const Home = () => {
 							</span>
 							<h1 className="sm:text-6xl text-4xl">Shawn Stone</h1>
 							<h3 className="sm:text-4xl text-2xl text-gray-400">
-								I'm a Frontend Developer
+								{"I'm a Frontend Developer"}
 							</h3>
 						</div>
 					</div>
@@ -144,11 +144,9 @@ const Home = () => {
 									<FaCode className="text-4xl" />
 									<h3 className="pt-8 pb-2 text-xl font-bold">Development</h3>
 									<p>
-										Front-end Development. Creating beautiful and responsive
-										websites. I've been a part of building websites using React,
-										Redux, Nextjs, WordPress, and Magento. With all of these
-										projects, best practices were always at the center of
-										development.
+										{
+											"Front-end Development. Creating beautiful and responsive websites. I've been a part of building websites using React, Redux, Nextjs, WordPress, and Magento. With all of these projects, best practices were always at the center of development."
+										}
 									</p>
 								</div>
 								<div className="bg-white py-12 px-8  rounded-lg">
