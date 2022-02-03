@@ -17,6 +17,7 @@ const ProjectCard = ({
 					layout="fill"
 					objectFit="cover"
 					src={image}
+					alt="project preview"
 				/>
 			</div>
 			<div className="p-4 leading-5">

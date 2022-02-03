@@ -11,18 +11,26 @@ import {
 import { MdOutlineMenu } from 'react-icons/md';
 import PROJECT_DATA from '../project_data';
 
+import Headshot from '../public/headshot_background.png';
+
 import Button from '../components/button.component';
 import ProjectCard from '../components/project-card.component';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const Home = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [navIsShown, setNavIsShown] = useState(false);
+	const [isMobile, setIsMobile] = useState('');
 
 	const toggleNav = () => {
 		const value = !navIsShown;
-		console.log(value);
 		setNavIsShown(value);
+	};
+
+	const mobileCheck = () => {
+		let windowWidth = window.innerWidth;
+		windowWidth > 640 ? setIsMobile(false) : setIsMobile(true);
 	};
 
 	useEffect(() => {
@@ -33,7 +41,9 @@ const Home = () => {
 				setIsScrolled(false);
 			}
 		}
+		mobileCheck();
 		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('resize', mobileCheck);
 	}, [isScrolled]);
 
 	return (
@@ -59,26 +69,26 @@ const Home = () => {
 					<div
 						id="overlay"
 						className={`h-screen w-screen absolute z-2000 bg-slate-800 z-10 ${
-							navIsShown ? 'block text-white' : 'hidden'
+							isMobile && navIsShown ? 'block text-white' : 'hidden'
 						}`}
 					></div>
 					<div id="nav" className="container mx-auto flex justify-between p-4">
-						<Link href="/" scroll={true}>
+						<Link href="/" passHref scroll={true}>
 							<div className="sm:text-3xl text-xl cursor-pointer z-20">
 								Shawn <span className="text-gray-400">Stone</span>
 							</div>
 						</Link>
 						<div
 							className={`flex justify-center sm:block h-screen sm:h-fit absolute sm:relative sm:w-max ${
-								navIsShown ? 'block text-white inset-0' : 'hidden'
+								isMobile && navIsShown ? 'block text-white inset-0' : 'hidden'
 							}`}
 						>
 							<ul className="flex items-center flex-col sm:flex-row justify-center z-30">
 								<li
 									className="relative mx-4 text-6xl sm:text-base py-8 sm:py-0"
-									onClick={toggleNav}
+									onClick={isMobile && navIsShown ? toggleNav : null}
 								>
-									<Link href="/#about" scroll={false}>
+									<Link href="/#about" passHref scroll={false}>
 										<span className="cursor-pointer py-4 hover:underline decoration-2 underline-offset-4 transition-all ease-in-out ">
 											About
 										</span>
@@ -86,9 +96,9 @@ const Home = () => {
 								</li>
 								<li
 									className="relative mx-4 text-6xl sm:text-base py-8 sm:py-0"
-									onClick={toggleNav}
+									onClick={isMobile && navIsShown ? toggleNav : null}
 								>
-									<Link href="/#projects" scroll={false}>
+									<Link href="/#projects" passHref scroll={false}>
 										<span className="cursor-pointer py-4 py-4 hover:underline decoration-2 underline-offset-4 transition-all ease-in-out">
 											Projects
 										</span>
@@ -127,7 +137,7 @@ const Home = () => {
 						</div>
 					</div>
 					<div className="absolute bottom-4 animate-bounce cursor-pointer">
-						<Link href="/#about" scroll={false}>
+						<Link href="/#about" passHref scroll={false}>
 							<FaArrowAltCircleDown className="text-2xl " />
 						</Link>
 					</div>
@@ -141,7 +151,11 @@ const Home = () => {
 						<div className="grid gap-4 md:grid-cols-2 grid-cols-1 ">
 							<div className="bg-white text-center lg:p-8 md:p-16 p-8 rounded-lg">
 								<div className="w-80 max-w-full mx-auto pb-8">
-									<img className="w-full" src="/headshot_background.png" />
+									<Image
+										className="w-full"
+										src={Headshot}
+										alt="profile image"
+									/>
 								</div>
 								<div className="text-left">
 									<p>
