@@ -17,6 +17,13 @@ import { useEffect, useState } from 'react';
 
 const Home = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
+	const [navIsShown, setNavIsShown] = useState(false);
+
+	const toggleNav = () => {
+		const value = !navIsShown;
+		console.log(value);
+		setNavIsShown(value);
+	};
 
 	useEffect(() => {
 		function handleScroll() {
@@ -26,7 +33,6 @@ const Home = () => {
 				setIsScrolled(false);
 			}
 		}
-		console.log(isScrolled);
 		window.addEventListener('scroll', handleScroll);
 	}, [isScrolled]);
 
@@ -50,29 +56,45 @@ const Home = () => {
 						isScrolled ? 'text-black drop-shadow-lg bg-white' : ''
 					}`}
 				>
+					<div
+						id="overlay"
+						className={`h-screen w-screen absolute z-2000 bg-slate-800 z-10 ${
+							navIsShown ? 'block text-white' : 'hidden'
+						}`}
+					></div>
 					<div id="nav" className="container mx-auto flex justify-between p-4">
 						<Link href="/" scroll={true}>
-							<div className="sm:text-3xl text-xl cursor-pointer">
+							<div className="sm:text-3xl text-xl cursor-pointer z-20">
 								Shawn <span className="text-gray-400">Stone</span>
 							</div>
 						</Link>
-						<div className="hidden sm:block">
-							<ul className="flex items-center">
-								<li className="relative mx-4">
+						<div
+							className={`flex justify-center sm:block h-screen sm:h-fit absolute sm:relative w-full sm:w-max ${
+								navIsShown ? 'block text-white' : 'hidden'
+							}`}
+						>
+							<ul className="flex items-center flex-col sm:flex-row justify-center z-30">
+								<li
+									className="relative mx-4 text-6xl sm:text-base py-8 sm:py-0"
+									onClick={toggleNav}
+								>
 									<Link href="/#about" scroll={false}>
 										<span className="cursor-pointer py-4 hover:underline decoration-2 underline-offset-4 transition-all ease-in-out ">
 											About
 										</span>
 									</Link>
 								</li>
-								<li className="relative mx-4">
+								<li
+									className="relative mx-4 text-6xl sm:text-base py-8 sm:py-0"
+									onClick={toggleNav}
+								>
 									<Link href="/#projects" scroll={false}>
 										<span className="cursor-pointer py-4 py-4 hover:underline decoration-2 underline-offset-4 transition-all ease-in-out">
 											Projects
 										</span>
 									</Link>
 								</li>
-								<li>
+								<li className="py-8 sm:py-0">
 									<a
 										href="/shawn_stone_resume1.pdf"
 										target="_blank"
@@ -83,8 +105,8 @@ const Home = () => {
 								</li>
 							</ul>
 						</div>
-						<div className="sm:hidden text-2xl">
-							<MdOutlineMenu />
+						<div className="sm:hidden text-2xl z-20 hover:cursor-pointer">
+							<MdOutlineMenu onClick={toggleNav} />
 						</div>
 					</div>
 				</div>

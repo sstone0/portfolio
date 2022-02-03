@@ -42,7 +42,7 @@ a {
 		radial-gradient(at 100% 100%, hsla(293, 0%, 100%, 1) 0, transparent 45%),
 		radial-gradient(at 100% 0%, hsla(178, 44%, 36%, 1) 0, transparent 41%);
 	background-size: 2000% 400%;
-	animation: gradient 30s linear infinite;
+	animation: gradient 20s linear infinite;
 }
 
 @keyframes gradient {
