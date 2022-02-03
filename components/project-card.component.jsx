@@ -28,7 +28,10 @@ const ProjectCard = ({
 						<ul className="flex flex-wrap">
 							{technology.map((tech) => {
 								return (
-									<li className="pr-4 pb-2 text-sm font-bold text-neutral-400 ">
+									<li
+										key={tech}
+										className="pr-4 pb-2 text-sm font-bold text-neutral-400 "
+									>
 										{tech}
 									</li>
 								);
