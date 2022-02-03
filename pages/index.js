@@ -69,8 +69,8 @@ const Home = () => {
 							</div>
 						</Link>
 						<div
-							className={`flex justify-center sm:block h-screen sm:h-fit absolute sm:relative w-full sm:w-max ${
-								navIsShown ? 'block text-white' : 'hidden'
+							className={`flex justify-center sm:block h-screen sm:h-fit absolute sm:relative sm:w-max ${
+								navIsShown ? 'block text-white inset-0' : 'hidden'
 							}`}
 						>
 							<ul className="flex items-center flex-col sm:flex-row justify-center z-30">
