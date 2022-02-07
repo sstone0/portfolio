@@ -137,7 +137,7 @@ const Home = () => {
         </div>
 
         <div id='about' className=''>
-          <div className='container mx-auto p-6 lg:py-18 md:py-8'>
+          <div className='container mx-auto px-5% md:px-6 lg:py-16 md:py-8 sm:py-6'>
             <h1 className='sm:text-4xl text-2xl font-bold pb-8 text-dark-blue'>
               About me
             </h1>
@@ -209,7 +209,7 @@ const Home = () => {
         </div>
 
         <div id='projects' className='bg-neutral-200'>
-          <div className='container mx-auto p-6 lg:py-18 md:py-8'>
+          <div className='container mx-auto px-5% md:px-6 lg:py-16 md:py-8 sm:py-6'>
             <h1 className='sm:text-4xl text-2xl font-bold pb-8 text-dark-blue'>
               Projects
             </h1>
