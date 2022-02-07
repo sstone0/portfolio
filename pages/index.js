@@ -59,17 +59,17 @@ const Home = () => {
         <link rel='icon' href='/favicon.svg' />
       </Head>
 
-      <main>
+      <main className='relative'>
+        <div
+          id='overlay'
+          className={`h-full w-screen absolute z-50 bg-slate-800 z-10 ${
+            isMobile && navIsShown ? "block text-white" : "hidden"
+          }`}></div>
         <div
           id='header'
-          className={`mx-auto font-bold text-white z-50 fixed inset-0 h-fit transition-all ${
+          className={`mx-auto font-bold text-white z-40 fixed inset-0 h-fit transition-all ${
             isScrolled ? "text-black drop-shadow-lg bg-white p-2" : "p-6"
           }`}>
-          <div
-            id='overlay'
-            className={`h-screen w-screen absolute z-2000 bg-slate-800 z-10 ${
-              isMobile && navIsShown ? "block text-white" : "hidden"
-            }`}></div>
           <div id='nav' className='container mx-auto flex justify-between'>
             <Link href='/' passHref scroll={true}>
               <div className='sm:text-3xl text-xl cursor-pointer z-20'>
@@ -137,7 +137,7 @@ const Home = () => {
         </div>
 
         <div id='about' className=''>
-          <div className='container mx-auto px-5% md:px-6 lg:py-16 md:py-8 sm:py-6'>
+          <div className='container mx-auto px-5% md:px-6 lg:py-16 md:py-8 py-6'>
             <h1 className='sm:text-4xl text-2xl font-bold pb-8 text-dark-blue'>
               About me
             </h1>
@@ -209,7 +209,7 @@ const Home = () => {
         </div>
 
         <div id='projects' className='bg-neutral-200'>
-          <div className='container mx-auto px-5% md:px-6 lg:py-16 md:py-8 sm:py-6'>
+          <div className='container mx-auto px-5% md:px-6 lg:py-16 md:py-8 py-6'>
             <h1 className='sm:text-4xl text-2xl font-bold pb-8 text-dark-blue'>
               Projects
             </h1>
