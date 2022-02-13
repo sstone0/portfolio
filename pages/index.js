@@ -106,7 +106,7 @@ const Home = () => {
 								</li>
 								<li className="py-8 sm:py-0">
 									<a
-										href="/shawn_stone_resume1.pdf"
+										href="/shawn_stone_resume.pdf"
 										target="_blank"
 										rel="noreferrer"
 									>
