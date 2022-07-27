@@ -25,16 +25,6 @@ a {
 
 #hero,
 #footer {
-  background: linear-gradient(
-    270deg,
-    #0369fb 0,
-    #72da0e 16.67%,
-    #f7c233 33.34%,
-    #ee7e33 50.01%,
-    #e93f33 66.68%,
-    #a552f2 83.35%,
-    #0369fb
-  );
   background: #2a2c38;
   background-image: radial-gradient(
       at 4% 99%,
@@ -44,7 +34,7 @@ a {
     radial-gradient(at 100% 100%, hsla(293, 0%, 100%, 1) 0, transparent 45%),
     radial-gradient(at 100% 0%, hsla(178, 44%, 36%, 1) 0, transparent 41%);
   background-size: 2000% 400%;
-  animation: gradient 20s linear infinite;
+  animation: gradient 10s linear infinite;
 }
 
 @keyframes gradient {
