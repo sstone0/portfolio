@@ -1,8 +1,8 @@
-const Button = ({ label, title }) => {
+const Button = ({ title }) => {
   return (
-    <div className='rounded-md p-2 px-4 bg-gray-400 text-black cursor-pointer'>
-      <span className='text-xs'>{title}</span>
-    </div>
+    <button className='cursor-pointer rounded-md bg-gray-400 p-2 px-4 font-bold text-black transition-all hover:bg-blue-500 hover:text-white'>
+      <span className='font text-sm'>{title}</span>
+    </button>
   );
 };
 

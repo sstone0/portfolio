@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer id='footer'>
       <div className='container mx-auto p-8'>
-        <div className='flex justify-between md:flex-row items-center text-white font-bold'>
-          <ul className='sm:justify-center flex text-lg'>
+        <div className='flex items-center justify-between font-bold text-white md:flex-row'>
+          <ul className='flex text-lg sm:justify-center'>
             <li className='pr-4'>
               <a
                 href='https://github.com/sstone0'

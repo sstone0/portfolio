@@ -26,11 +26,9 @@ a {
 #hero,
 #footer {
   background: #2a2c38;
-  background-image: radial-gradient(
-      at 4% 99%,
+  background-image: radial-gradient(at 4% 99%,
       hsla(165, 14%, 33%, 1) 0,
-      transparent 59%
-    ),
+      transparent 59%),
     radial-gradient(at 100% 100%, hsla(293, 0%, 100%, 1) 0, transparent 45%),
     radial-gradient(at 100% 0%, hsla(178, 44%, 36%, 1) 0, transparent 41%);
   background-size: 2000% 400%;
@@ -41,9 +39,11 @@ a {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }

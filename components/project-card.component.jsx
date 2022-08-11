@@ -10,8 +10,8 @@ const ProjectCard = ({
   url,
 }) => {
   return (
-    <div className='bg-white rounded-lg transition ease-out sm:hover:-translate-y-2 drop-shadow-md'>
-      <div className=' relative lg:h-80 md:h-56 h-60 border-b border-gray-200'>
+    <div className='rounded-lg bg-white drop-shadow-md transition ease-out sm:hover:-translate-y-2'>
+      <div className=' relative h-60 border-b border-gray-200 md:h-56 lg:h-80'>
         <Image
           className='rounded-t-lg'
           layout='fill'
@@ -21,9 +21,9 @@ const ProjectCard = ({
         />
       </div>
       <div className='p-4 leading-5'>
-        <h3 className='font-bold sm:text-xl pb-2 text-dark-blue'>{title}</h3>
+        <h3 className='pb-2 font-bold text-dark-blue sm:text-xl'>{title}</h3>
         <p>{description}</p>
-        <div className='flex justify-between items-end pt-2'>
+        <div className='flex items-end justify-between pt-2'>
           <div>
             <ul className='flex flex-wrap'>
               {technology.map((tech) => {
