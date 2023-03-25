@@ -26,11 +26,6 @@ const Home = () => {
     windowWidth > 640 ? setIsMobile(false) : setIsMobile(true);
   };
 
-
-
-
-  
-  
   useEffect(() => {
     function handleScroll() {
       if (window.pageYOffset > 50) {
