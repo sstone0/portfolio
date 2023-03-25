@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaGithubSquare, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithubSquare } from "react-icons/fa";
 
 const ProjectCard = ({
   title,

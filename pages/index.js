@@ -1,19 +1,18 @@
-import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import {
   FaArrowAltCircleDown,
   FaCode,
   FaCropAlt,
-  FaSignal,
+  FaSignal
 } from "react-icons/fa";
-import PROJECT_DATA from "../project_data";
-import Headshot from "../public/headshot_background.png";
+import Footer from "../components/footer.component";
 import Header from "../components/header.component";
 import ProjectCard from "../components/project-card.component";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Footer from "../components/footer.component";
+import PROJECT_DATA from "../project_data";
+import Headshot from "../public/headshot_background.png";
 
 export const AppContext = React.createContext();
 
@@ -27,6 +26,11 @@ const Home = () => {
     windowWidth > 640 ? setIsMobile(false) : setIsMobile(true);
   };
 
+
+
+
+  
+  
   useEffect(() => {
     function handleScroll() {
       if (window.pageYOffset > 50) {
