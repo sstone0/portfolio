@@ -1,26 +1,31 @@
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer id='footer'>
-      <div className='container mx-auto p-8'>
+      <div className='container p-8 mx-auto'>
         <div className='flex items-center justify-between font-bold text-white md:flex-row'>
           <ul className='flex text-lg sm:justify-center'>
             <li className='pr-4'>
-              <a
+              <Link
+							passHref
                 href='https://github.com/sstone0'
                 target='_blank'
-                rel='noreferrer'>
+                rel='noreferrer'
+								aria-label="Github">
                 <FaGithub />
-              </a>
+              </Link>
             </li>
             <li className='pr-4'>
-              <a
+              <Link
+							passHref
                 href='https://www.linkedin.com/in/shawn-stone/'
                 target='_blank'
-                rel='noreferrer'>
+                rel='noreferrer'
+								aria-label="LinkedIn">
                 <FaLinkedinIn />
-              </a>
+              </Link>
             </li>
           </ul>
           <div>

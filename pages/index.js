@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import {
-  FaArrowAltCircleDown,
-  FaCode,
-  FaCropAlt,
-  FaSignal
+	FaArrowAltCircleDown,
+	FaCode,
+	FaCropAlt,
+	FaSignal
 } from "react-icons/fa";
 import Footer from "../components/footer.component";
 import Header from "../components/header.component";
@@ -67,37 +67,40 @@ const Home = () => {
 
         <div
           id='hero'
-          className='relative inset-0 flex h-screen items-center justify-center bg-zinc-500 text-white'>
-          <div className='container mx-auto flex items-center justify-center'>
-            <div className='text-center	font-bold'>
+          className='relative inset-0 flex items-center justify-center h-screen text-white bg-zinc-500'>
+          <div className='container flex items-center justify-center mx-auto'>
+            <div className='font-bold text-center'>
               <span className='text-sm text-gray-400 sm:text-xl'>
                 Hi, my name is
               </span>
               <h1 className='text-4xl sm:text-6xl'>Shawn Stone</h1>
-              <h3 className='text-2xl text-gray-400 sm:text-4xl'>
+              <h2 className='text-2xl text-gray-400 sm:text-4xl'>
                 {"I'm a Frontend Developer"}
-              </h3>
+              </h2>
             </div>
           </div>
-          <div className='absolute bottom-4 animate-bounce cursor-pointer'>
-            <Link href='/#about' passHref scroll={false}>
-              <FaArrowAltCircleDown className='text-2xl ' />
+          <div className='absolute cursor-pointer bottom-4 animate-bounce'>
+            <Link href='/#about' passHref scroll={false} aria-label="scroll arrow">
+              <FaArrowAltCircleDown className='text-2xl' />
             </Link>
           </div>
         </div>
         <Header />
         <div id='about'>
           <div className='container mx-auto px-5% py-6 md:px-6 md:py-8 lg:py-16'>
-            <h1 className='pb-8 text-2xl font-bold text-dark-blue sm:text-4xl'>
+            <h2 className='pb-8 text-2xl font-bold text-dark-blue sm:text-4xl'>
               About me
-            </h1>
+            </h2>
             <div className='grid grid-cols-1 gap-4 md:grid-cols-2 '>
-              <div className='rounded-lg bg-white p-8 text-center md:p-16 lg:p-8'>
-                <div className='mx-auto w-80 max-w-full pb-8'>
+              <div className='p-8 text-center bg-white rounded-lg md:p-16 lg:p-8'>
+                <div className='max-w-full pb-8 mx-auto w-80'>
                   <Image
                     className='w-full'
                     src={Headshot}
                     alt='profile image'
+										placeholder="blur"
+										width={500}
+										height={500}
                   />
                 </div>
                 <div className='text-left'>
@@ -119,7 +122,7 @@ const Home = () => {
                 </div>
               </div>
               <div className='inline-grid gap-4 '>
-                <div className='rounded-lg bg-white py-12 px-8'>
+                <div className='px-8 py-12 bg-white rounded-lg'>
                   <FaCode className='text-4xl' />
                   <h3 className='pt-8 pb-2 text-xl font-bold'>Development</h3>
                   <p>
@@ -128,7 +131,7 @@ const Home = () => {
                     }
                   </p>
                 </div>
-                <div className='rounded-lg bg-white py-12  px-8'>
+                <div className='px-8 py-12 bg-white rounded-lg'>
                   <FaCropAlt className='text-4xl' />
                   <h3 className='pt-8 pb-2 text-xl font-bold'>
                     Ui / UX Design
@@ -140,7 +143,7 @@ const Home = () => {
                     something I take on with a passion.
                   </p>
                 </div>
-                <div className='rounded-lg bg-white py-12  px-8'>
+                <div className='px-8 py-12 bg-white rounded-lg'>
                   <FaSignal className='text-4xl' />
                   <h3 className='pt-8 pb-2 text-xl font-bold'>
                     Digital Marketing
@@ -160,9 +163,9 @@ const Home = () => {
 
         <div id='projects' className='bg-neutral-200'>
           <div className='container mx-auto px-5% py-6 md:px-6 md:py-8 lg:py-16'>
-            <h1 className='pb-8 text-2xl font-bold text-dark-blue sm:text-4xl'>
+            <h2 className='pb-8 text-2xl font-bold text-dark-blue sm:text-4xl'>
               Projects
-            </h1>
+            </h2>
             <div className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2'>
               {PROJECT_DATA.map((props) => {
                 return (
