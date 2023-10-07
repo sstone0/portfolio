@@ -20,7 +20,7 @@ const Header = () => {
 				isScrolled ? "bg-white p-2 text-black drop-shadow-lg" : "p-6"
 			}`}
 		>
-			<div id='nav' className='container mx-auto flex justify-between'>
+			<div id='nav' className='container flex justify-between mx-auto'>
 				<Link href='/' passHref scroll={true}>
 					<div
 						className={`${
@@ -41,26 +41,26 @@ const Header = () => {
 						} z-30 flex flex-col items-center justify-center sm:flex-row`}
 					>
 						<li
-							className='relative mx-2 py-8 text-6xl hover:-rotate-6 sm:py-0 sm:text-base'
+							className='relative py-8 mx-2 text-6xl hover:-rotate-6 sm:py-0 sm:text-base'
 							onClick={isMobile && navIsShown ? toggleNav : null}
 						>
 							<Link href='/#about' passHref scroll={false}>
-								<span className='cursor-pointer rounded-md p-3 decoration-2 underline-offset-4 transition-all ease-in-out hover:bg-sky-600 hover:text-white hover:underline'>
+								<span className='p-3 transition-all ease-in-out rounded-md cursor-pointer decoration-2 underline-offset-4 hover:bg-sky-600 hover:text-white hover:underline'>
 									About
 								</span>
 							</Link>
 						</li>
 						<li
-							className='relative mx-2 py-8 text-6xl hover:rotate-6  sm:py-0 sm:text-base'
+							className='relative py-8 mx-2 text-6xl hover:rotate-6 sm:py-0 sm:text-base'
 							onClick={isMobile && navIsShown ? toggleNav : null}
 						>
 							<Link href='/#projects' passHref scroll={false}>
-								<span className='cursor-pointer rounded-md p-3 decoration-2 underline-offset-4 transition-all ease-in-out hover:bg-cyan-600 hover:text-white hover:underline'>
+								<span className='p-3 transition-all ease-in-out rounded-md cursor-pointer decoration-2 underline-offset-4 hover:bg-cyan-600 hover:text-white hover:underline'>
 									Projects
 								</span>
 							</Link>
 						</li>
-						<li className='mx-2 py-8 sm:py-0'>
+						<li className='py-8 mx-2 sm:py-0'>
 							<a
 								href='/shawn_stone_resume.pdf'
 								target='_blank'
@@ -71,7 +71,7 @@ const Header = () => {
 						</li>
 					</ul>
 				</div>
-				<div className='z-20 text-2xl hover:cursor-pointer sm:hidden'>
+				<div className={`${isScrolled ? 'text-black':'text-white'} z-20 w-[20px] text-2xl hover:cursor-pointer sm:hidden`}>
 					<MdOutlineMenu onClick={toggleNav} />
 				</div>
 			</div>
