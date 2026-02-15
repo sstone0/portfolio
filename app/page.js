@@ -1,20 +1,20 @@
-import Head from "next/head";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
-	FaArrowAltCircleDown,
-	FaCode,
-	FaCropAlt,
-	FaSignal
+  FaArrowAltCircleDown,
+  FaCode,
+  FaCropAlt,
+  FaSignal,
 } from "react-icons/fa";
 import Footer from "../components/footer.component";
 import Header from "../components/header.component";
 import ProjectCard from "../components/project-card.component";
+import { AppContext } from "../context/AppContext";
 import PROJECT_DATA from "../project_data";
 import Headshot from "../public/headshot_background.png";
-
-export const AppContext = React.createContext();
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,17 +47,6 @@ const Home = () => {
         isScrolled: isScrolled,
         setNavIsShown,
       }}>
-      <Head>
-        <title>
-          Frontend Web Developer and Digital Marketing Specialist - Shawn Stone
-        </title>
-        <meta
-          name='description'
-          content='Experienced Frontend Developer with a specialty in UX/UI design along with Digital Marketing.'
-        />
-        <link rel='icon' href='/favicon.svg' />
-      </Head>
-
       <main className='relative'>
         <div
           id='overlay'
@@ -80,9 +69,9 @@ const Home = () => {
             </div>
           </div>
           <div className='absolute cursor-pointer bottom-4 animate-bounce'>
-            <Link href='/#about' passHref scroll={false} aria-label="scroll arrow">
+            <a href='#about' aria-label="scroll arrow">
               <FaArrowAltCircleDown className='text-2xl' />
-            </Link>
+            </a>
           </div>
         </div>
         <Header />

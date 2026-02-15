@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { MdOutlineMenu } from "react-icons/md";
-import Button from "../components/button.component";
-import { AppContext } from "../pages/index";
+import Button from "./button.component";
+import { AppContext } from "../context/AppContext";
 
 const Header = () => {
 	const { isScrolled, isMobile, navIsShown, setNavIsShown } =
@@ -44,21 +44,21 @@ const Header = () => {
 							className='relative py-8 mx-2 text-6xl hover:-rotate-6 sm:py-0 sm:text-base'
 							onClick={isMobile && navIsShown ? toggleNav : null}
 						>
-							<Link href='/#about' passHref scroll={false}>
+							<a href='#about'>
 								<span className='p-3 transition-all ease-in-out rounded-md cursor-pointer decoration-2 underline-offset-4 hover:bg-sky-600 hover:text-white hover:underline'>
 									About
 								</span>
-							</Link>
+							</a>
 						</li>
 						<li
 							className='relative py-8 mx-2 text-6xl hover:rotate-6 sm:py-0 sm:text-base'
 							onClick={isMobile && navIsShown ? toggleNav : null}
 						>
-							<Link href='/#projects' passHref scroll={false}>
+							<a href='#projects'>
 								<span className='p-3 transition-all ease-in-out rounded-md cursor-pointer decoration-2 underline-offset-4 hover:bg-cyan-600 hover:text-white hover:underline'>
 									Projects
 								</span>
-							</Link>
+							</a>
 						</li>
 						<li className='py-8 mx-2 sm:py-0'>
 							<a
